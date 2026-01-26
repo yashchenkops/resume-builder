@@ -1,0 +1,15 @@
+$fontPrimary: 'Noto Sans', system-ui, Tahoma, sans-serif;
+
+$white: #ffffff;
+$black: #000000;
+$gray: #939393;
+
+$breakpoints: (
+  mobile-sm: 320px,
+  mobile: 425px,
+  mobile-lg: 576px,
+  tablet: 768px,
+  desktop-sm: 1024px,
+  desktop: 1280px,
+  desktop-lg: 1440px,
+);

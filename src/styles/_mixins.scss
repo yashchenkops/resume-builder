@@ -1,0 +1,55 @@
+@use 'sass:map';
+@use './variables' as *;
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+// usage
+// .button {
+//   @include hover {
+//     background: black;
+//   }
+// }
+
+@mixin above($bp) {
+  @media (min-width: map.get($breakpoints, $bp)) {
+    @content;
+  }
+}
+// usage
+// @include above(tablet) {
+//   display: none;
+// }
+
+@mixin below($bp) {
+  @media (max-width: calc(map.get($breakpoints, $bp) - 1px)) {
+    @content;
+  }
+}
+// usage
+// @include below(tablet) {
+//   display: none;
+// }
+
+@mixin between($from, $to) {
+  @media (min-width: map.get($breakpoints, $from)) and (max-width: calc(map.get($breakpoints, $to) - 1px)) {
+    @content;
+  }
+}
+// usage
+// @include between(md, lg) {
+//   font-size: 18px;
+// }
+
+@mixin noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}

@@ -1,0 +1,18 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+* {
+  font-family: $fontPrimary;
+  color: $black;
+}
+
+body {
+  background-color: $white;
+}
+
+.container {
+  max-width: 1153px;
+  padding: 0 15px;
+  margin: 0 auto;
+  min-width: 320px;
+}
