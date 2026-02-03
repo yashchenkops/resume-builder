@@ -1,0 +1,10 @@
+@use '../base/variables' as *;
+
+.section {
+  &__title {
+    font-size: 21px;
+    border-bottom: 2px solid $black;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+}
