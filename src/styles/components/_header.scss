@@ -1,0 +1,21 @@
+@use '@/styles/variables' as *;
+
+.header {
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 30px;
+
+  .cv-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .cv-subtitle {
+    font-size: 13px;
+    color: $gray;
+
+    a {
+      color: inherit;
+    }
+  }
+}
