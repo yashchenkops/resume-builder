@@ -11,35 +11,41 @@ function App() {
       <Header />
       <Section title="Relevant Experience">
         {experience.map((item) => (
-          <SectionItem key={item.id} date={item.date} title={item.company} location={item.location}>
+          <SectionItem
+            key={item.id}
+            left={item.date}
+            company={item.company}
+            location={item.location}
+          >
             <Experience position={item.position} description={item.description} />
           </SectionItem>
         ))}
       </Section>
       <Section title="Education">
         {education.map((item) => (
-          <SectionItem key={item.id} date={item.date} title={item.company} location={item.location}>
+          <SectionItem
+            key={item.id}
+            left={item.date}
+            company={item.company}
+            location={item.location}
+          >
             <Experience position={item.position} description={item.description} />
           </SectionItem>
         ))}
       </Section>
       <Section title="Extracurricular & Awards">
         {awards.map((item) => (
-          <div className="section-item">
-            <div className="section-item__left">{item.date}</div>
-            <div className="section-item__body">{item.text}</div>
-          </div>
+          <SectionItem key={item.id} left={item.date}>
+            {item.text}
+          </SectionItem>
         ))}
       </Section>
       <Section title="Additional Information & Skills">
-        <div className="section-item">
-          <div className="section-item__left">Languages:</div>
-          <div className="section-item__body">{skills.languages.join(', ')}</div>
-        </div>
-        <div className="section-item">
-          <div className="section-item__left">Additional Skills:</div>
-          <div className="section-item__body">{skills.additional.join(', ')}</div>
-        </div>
+        {skills.map((skill) => (
+          <SectionItem key={skill.id} left={`${skill.label}:`}>
+            {skill.items.join(', ')}
+          </SectionItem>
+        ))}
       </Section>
     </main>
   );

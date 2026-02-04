@@ -70,19 +70,23 @@ export const awards = [
   },
 ];
 
-export const skills = {
-  languages: [
-    'Spanish (Native)',
-    'English (Fluent)',
-    'Italian (Intermediate)',
-  ],
-  additional: [
-    'NIST Cybersecurity Framework',
-    'Microsoft Office',
-    'Kali Linux',
-    'Incident Response Planning',
-    'Firewall Configuration',
-    'AWS Security',
-    'AES Encryption',
-  ],
-};
+export const skills = [
+  {
+    id: 'languages',
+    label: 'Languages',
+    items: ['Spanish (Native)', 'English (Fluent)', 'Italian (Intermediate)'],
+  },
+  {
+    id: 'additional',
+    label: 'Additional Skills',
+    items: [
+      'NIST Cybersecurity Framework',
+      'Microsoft Office',
+      'Kali Linux',
+      'Incident Response Planning',
+      'Firewall Configuration',
+      'AWS Security',
+      'AES Encryption',
+    ],
+  },
+];
