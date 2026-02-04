@@ -1,11 +1,33 @@
+@use '@/styles/base/variables' as *;
+@use '@/styles/base/mixins' as *;
+
 .wrapper {
+  display: flex;
+  flex-direction: column;
   max-width: 1186px;
   margin: 0 auto;
+
+  @include above(tablet) {
+    flex-direction: row;
+  }
 }
 
 .resume {
   width: 100%;
-  padding: 70px 20px;
+  padding: 40px 10px 20px;
   margin: 0 auto;
   min-width: 320px;
+
+  @include above(tablet) {
+    padding: 70px 20px;
+  }
+}
+
+.comments-action {
+  padding-top: 20px;
+  padding-bottom: 50px;
+
+  @include above(tablet) {
+    padding: 0 20px 50px;
+  }
 }

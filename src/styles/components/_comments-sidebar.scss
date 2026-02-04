@@ -1,8 +1,14 @@
 @use '@/styles/base/variables' as *;
+@use '@/styles/base/mixins' as *;
 
 .sidebar {
-  width: 35%;
-  padding: 70px 20px;
+  width: 100%;
+  padding: 40px 10px 20px;
+
+  @include above(tablet) {
+    padding: 70px 20px;
+    width: 35%;
+  }
 }
 
 .sidebar__title {
