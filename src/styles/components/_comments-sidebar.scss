@@ -1,0 +1,27 @@
+@use '@/styles/base/variables' as *;
+
+.sidebar {
+  width: 35%;
+  padding: 70px 20px;
+}
+
+.sidebar__title {
+  font-size: 21px;
+}
+
+.sidebar__inner {
+  padding: 15px;
+  border: 2px solid $black;
+  border-radius: 10px;
+}
+
+.comment {
+  padding: 5px;
+  border: 2px solid $black;
+  margin: 10px 0;
+  border-radius: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

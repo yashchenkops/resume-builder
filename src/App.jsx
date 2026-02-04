@@ -18,7 +18,6 @@ function App() {
   return (
     <div className="wrapper">
       <main className="resume">
-        <CommentsButton onClick={() => setIsModalOpen(true)} />
         <Header />
         <Section title="Relevant Experience">
           {experience.map((item) => (
@@ -58,9 +57,10 @@ function App() {
             </SectionItem>
           ))}
         </Section>
+        <CommentsButton onClick={() => setIsModalOpen(true)} />
       </main>
 
-      <CommentsSidebar comments={comments} />
+      {comments.length > 0 && <CommentsSidebar comments={comments} />}
 
       {isModalOpen && <CommentsModal onClose={() => setIsModalOpen(false)} onSave={addComment} />}
     </div>

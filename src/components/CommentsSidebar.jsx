@@ -1,16 +1,13 @@
 const CommentsSidebar = ({ comments }) => (
-  <aside className="comments-sidebar">
-    <h3>Comments</h3>
-
-    {comments.length === 0 && (
-      <p>No comments yet</p>
-    )}
-
-    {comments.map(comment => (
-      <div key={comment.id} className="comment">
-        {comment.text}
-      </div>
-    ))}
+  <aside className="sidebar">
+    <div className="sidebar__inner">
+      <h3 className="sidebar__title">Comments</h3>
+      {comments.map((comment) => (
+        <div key={comment.id} className="comment">
+          {comment.text}
+        </div>
+      ))}
+    </div>
   </aside>
 );
 

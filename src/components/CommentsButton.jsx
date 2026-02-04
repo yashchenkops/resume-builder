@@ -1,7 +1,9 @@
 const CommentsButton = ({ onClick }) => (
-  <button className="button" type="button" onClick={onClick}>
+  <div className="comments-action">
+    <button className="button" type="button" onClick={onClick}>
     Review
   </button>
+  </div>
 );
 
 export default CommentsButton;

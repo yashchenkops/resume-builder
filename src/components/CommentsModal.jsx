@@ -18,8 +18,8 @@ const CommentsModal = ({ onClose, onSave }) => {
           placeholder="Write your comment..."
         />
         <div className="modal-actions">
-          <button onClick={onClose}>Cancel</button>
-          <button onClick={handleSave}>Save</button>
+          <button className="button" onClick={handleSave}>Save</button>
+          <button className="button" onClick={onClose}>Cancel</button>
         </div>
       </div>
     </div>
