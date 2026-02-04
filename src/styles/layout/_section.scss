@@ -1,10 +1,15 @@
 @use '../base/variables' as *;
 
 .section {
-  &__title {
-    font-size: 21px;
-    border-bottom: 2px solid $black;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
   }
+}
+
+.section__title {
+  border-bottom: 2px solid $black;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }

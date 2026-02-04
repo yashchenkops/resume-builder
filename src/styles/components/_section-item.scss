@@ -4,17 +4,30 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
+  margin-bottom: 15px;
 
-  &__left {
-    flex: 1 0 20%;
+  &:last-child {
+    margin-bottom: 0;
   }
+}
 
-  &__content {
-    flex: 1 0 80%;
-  }
+.section-item__left {
+  width: 145px;
+  color: $gray;
+}
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-  }
+.section-item__body {
+  flex: 1;
+  color: $gray;
+}
+
+.section-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.section-item__location {
+  color: $gray;
 }

@@ -1,21 +1,18 @@
-@use "@/styles/base/variables" as *;
+@use '@/styles/base/variables' as *;
 
 .header {
   text-align: center;
-  padding-top: 50px;
   margin-bottom: 30px;
+}
 
-  .cv-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
+.cv-title {
+  margin-bottom: 10px;
+}
 
-  .cv-subtitle {
-    font-size: 13px;
-    color: $gray;
+.cv-subtitle {
+  color: $gray;
 
-    a {
-      color: inherit;
-    }
+  a {
+    color: inherit;
   }
 }
