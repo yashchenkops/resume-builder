@@ -1,0 +1,16 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.button {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid $black;
+
+  @include hover {
+    background-color: $black;
+    color: $white;
+    cursor: pointer;
+  }
+}
